@@ -37,7 +37,7 @@ html,body{width:100%;height:100%;min-height:100vh;background:var(--deep);overflo
 .star{position:absolute;border-radius:50%;animation:twinkle var(--td) ease-in-out infinite alternate}
 @keyframes twinkle{from{opacity:var(--lo);transform:scale(1)}to{opacity:1;transform:scale(1.4)}}
 
-.moon-wrap{position:absolute;top:max(40px, env(safe-area-inset-top + 20px));right:25px;width:75px;height:75px;z-index:5}
+.moon-wrap{position:absolute;top:5px;right:25px;width:75px;height:75px;z-index:5}
 .moon{width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 38% 35%,#fffef0,#f8e870 40%,#d4b830);box-shadow:0 0 50px 20px rgba(240,210,80,.22),0 0 100px 40px rgba(240,210,80,.1);animation:moonpulse 5s ease-in-out infinite alternate}
 @keyframes moonpulse{from{box-shadow:0 0 50px 20px rgba(240,210,80,.2),0 0 100px 40px rgba(240,210,80,.08)}to{box-shadow:0 0 70px 30px rgba(240,210,80,.35),0 0 140px 60px rgba(240,210,80,.15)}}
 
@@ -138,23 +138,13 @@ html,body{width:100%;height:100%;min-height:100vh;background:var(--deep);overflo
 
 <div id="cursor"></div>
 
-<div class="nav">
-  <button class="nd on" onclick="go(1)"></button>
-  <button class="nd" onclick="go(2)"></button>
-  <button class="nd" onclick="go(3)"></button>
-  <button class="nd" onclick="go(4)"></button>
-  <button class="nd" onclick="go(5)"></button>
-  <button class="nd" onclick="go(6)"></button>
-  <button class="nd" onclick="go(7)"></button>
-</div>
-
 <section class="scene active" id="s1">
   <div class="sky" id="sky1"></div>
   <div class="moon-wrap">
     <div class="moon"></div>
   </div>
   <h1 class="s1title" id="s1title">Para ti, mi amor</h1>
-  <p class="s1sub" id="s1sub">este pequeño universo es tuyo</p>
+  <p class="s1sub" id="s1sub">este pequeño universo es tuyo, lo hice para tí.</p>
   
   <svg id="flowerField" style="position:absolute;bottom:8vh;left:0;right:0;width:100%;height:35vh;overflow:visible" viewBox="0 0 800 220" preserveAspectRatio="none"></svg>
   
@@ -176,7 +166,7 @@ html,body{width:100%;height:100%;min-height:100vh;background:var(--deep);overflo
       <path d="M50 80 C50 80 5 48 5 25 C5 12 15 4 27 4 C36 4 44 10 50 18 C56 10 64 4 73 4 C85 4 95 12 95 25 C95 48 50 80 50 80Z" fill="url(#hg1)"/>
       <path d="M50 72 C50 72 12 46 12 26 C12 16 19 10 27 10 C35 10 42 15 50 24" fill="rgba(255,200,220,.25)"/>
     </svg>
-    <div class="heart-label" id="heartLabel">TE AMO<span id="heartSub">siempre y para siempre</span></div>
+    <div class="heart-label" id="heartLabel">TE AMO<span id="heartSub">mi princesa hermosa</span></div>
   </div>
   <button class="btn-next" onclick="go(3)">Siguiente →</button>
 </section>
@@ -232,16 +222,16 @@ html,body{width:100%;height:100%;min-height:100vh;background:var(--deep);overflo
 <section class="scene" id="s5">
   <div class="game-container" id="lockScreen">
     <h2 class="game-title">Un pequeño secreto ✦</h2>
-    <p class="game-hint">¿Cuál es la palabra mágica que nos conecta?<br>(Pista: lo que siento por ti)</p>
+    <p class="game-hint">¿Cuál es la palabra mágica que nos conecta?<br>(Pista: Nuestro apodo favorito "ama....to")</p>
     <input type="password" class="game-input" id="magicWord" placeholder="Escribe aquí..." autocomplete="off">
     <button class="game-btn" onclick="checkPassword()">Desbloquear</button>
-    <p class="error-msg" id="errorMsg">Mmm... intenta de nuevo, mi amor.</p>
+    <p class="error-msg" id="errorMsg">Mmm... intenta de nuevo, con un poco más de amor.</p>
   </div>
 
   <div class="music-container" id="musicRoom">
-    <h2 class="music-title">Nuestra Canción ♡</h2>
+    <h2 class="music-title">Elegí una canción especial ♡</h2>
     <iframe id="spotifyPlayer" style="border-radius:12px" src="" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    <img id="spotifyCode" class="spotify-code" src="" alt="Escanea en Spotify">
+    <img id="spotifyCode" class="spotify-code" src="img/code.jpeg" alt="Escanea en Spotify">
     <p class="scan-hint">Abre Spotify, ve a buscar 🔍, toca la cámara y escanea esto.</p>
     <button class="game-btn" id="btnS6" onclick="go(6)" style="margin-top: 10px;">Leer mi carta →</button>
   </div>
@@ -266,15 +256,15 @@ html,body{width:100%;height:100%;min-height:100vh;background:var(--deep);overflo
 
 <section class="scene" id="s7">
   <div style="max-width:580px; margin: 0 auto; width:100%;">
-    <h1 class="tl-title">Nuestra historia 💫</h1>
+    <h1 class="tl-title">Nuestra pequeña historia hasta hoy💫</h1>
     
     <div class="timeline">
       <div class="t-line"></div>
-      <div class="t-item" style="animation-delay: 0.3s"><div class="t-content">✨ Te conocí</div></div>
-      <div class="t-item" style="animation-delay: 0.9s"><div class="t-content">❤️ Me enamoré de ti</div></div>
-      <div class="t-item" style="animation-delay: 1.5s"><div class="t-content">🎵 Nuestra canción</div></div>
-      <div class="t-item" style="animation-delay: 2.1s"><div class="t-content">💌 Este detalle para ti</div></div>
-      <div class="t-item" style="animation-delay: 2.7s"><div class="t-content">🚀 Y esto apenas comienza...</div></div>
+      <div class="t-item" style="animation-delay: 0.3s"><div class="t-content">Te conocí</div></div>
+      <div class="t-item" style="animation-delay: 0.9s"><div class="t-content">Me enamoré de ti</div></div>
+      <div class="t-item" style="animation-delay: 1.5s"><div class="t-content">Nuestra canción</div></div>
+      <div class="t-item" style="animation-delay: 2.1s"><div class="t-content">Este detalle para ti</div></div>
+      <div class="t-item" style="animation-delay: 2.7s"><div class="t-content">Y esto apenas comienza...</div></div>
     </div>
     
     <button class="btn-restart" style="margin-top:50px; animation:fadeup 1s ease 3.5s both;" onclick="go(1)">↺ Volver al inicio</button>
@@ -287,12 +277,12 @@ html,body{width:100%;height:100%;min-height:100vh;background:var(--deep);overflo
 // ✦ ZONA DE CONFIGURACIÓN ✦
 // ==========================================
 const CONFIG = {
-  nombreElla: "Valeria",
-  tuNombre: "Carlos",
-  tituloBienvenida: "Para ti, mi amor",
-  palabraSecreta: "te amo",
-  idSpotify: "4uLU6hMCjMI75M1A2tKUQC", 
-  mensajeExtra: ""
+  nombreElla: "Hannah Camila",
+  tuNombre: "León",
+  tituloBienvenida: "Un pequeño detalle mi amor",
+  palabraSecreta: "amamotito",
+  idSpotify: "0zLr0KLp3KUKGRBzgsrVK2", 
+  mensajeExtra: "No es un gran detalle, pero cada parte de esto fue hecho con mucho amor pensando en ti. Espero que te guste y que sepas que cada día me enamoro más de ti. Gracias por ser tú, por tu luz, tu risa, tu forma de ser. Eres lo mejor que me ha pasado y quiero seguir escribiendo una historia a tu lado. Te amo con todo mi corazón, hoy y siempre amamotito. ♡"
 };
 
 // --- Aplicar Configuración ---
@@ -301,8 +291,8 @@ document.getElementById('s1title').textContent = CONFIG.tituloBienvenida;
 document.getElementById('heartLabel').childNodes[0].textContent = 'TE AMO, ' + CONFIG.nombreElla.toUpperCase();
 document.getElementById('letterSign').textContent = 'Con todo mi amor, ' + CONFIG.tuNombre + ' ♡';
 
-document.getElementById('spotifyPlayer').src = `https://open.spotify.com/embed/track/$${CONFIG.idSpotify}?utm_source=generator&theme=0`;
-document.getElementById('spotifyCode').src = `https://scannables.scdn.co/uri/default/svg/1a0535/f5b8c8/640/spotify:track:${CONFIG.idSpotify}`;
+document.getElementById('spotifyPlayer').src = `https://open.spotify.com/embed/track/${CONFIG.idSpotify}?utm_source=generator&theme=0`;
+// document.getElementById('spotifyCode').src = `https://scannables.scdn.co/uri/default/svg/1a0535/f5b8c8/640/spotify:track:${CONFIG.idSpotify}`;
 
 // ==========================================
 
@@ -442,11 +432,12 @@ function go(n){
 // ====== SCENE 2: GALAXIA DINÁMICA ======
 let galaxyInit=false;
 let allPhrases = [
-  "Eres mi lugar favorito", "Tu risa es mi canción", "Contigo todo es aventura",
+  "Eres mi lugar favorito", "Tu risa es mi canción favorita", "Contigo todo es aventura",
   "Mi corazón te eligió", "Eres mi hogar", "Te quiero más cada día",
   "Nada se compara a ti", "Eres todo lo que soñé", "Tu sonrisa me ilumina",
   "Eres mi razón de sonreír", "Mi universo entero", "Amo tus ojos",
-  "Eres mi luz", "Mi persona favorita", "Me haces inmensamente feliz"
+  "Eres mi luz", "Mi persona favorita", "Me haces inmensamente feliz", "Amo tu sonrisa",
+  "Eres mi mejor pensamiento", "Contigo la obscuridad es luz"
 ];
 
 function initGalaxy(){
@@ -644,13 +635,15 @@ function initLetter(){
   
   const textLines = [
     "Hay momentos que no caben en palabras,",
-    "pero quiero intentarlo, porque te lo mereces.<br><br>",
+    "pero quiero intentarlo, porque te lo mereces mi amor.",
     "Eres la parte más bonita de mis días,",
     "la razón que me hace sonreír sin motivo,",
     "la persona con quien quiero compartir",
-    "cada aventura pequeña y cada momento grande.<br><br>",
+    "cada aventura pequeña y cada momento grande.",
     "No necesito el universo entero.",
-    "Me basta y me sobra tenerte a ti."
+    "Me basta y me sobra tenerte a ti.",
+    "Se que no es un buen momento y que no te sientes bien, pero quiero que sepas que estoy aquí, que te amo con todo mi corazón y que juntos podemos superar cualquier cosa.",
+    "Te debía una carta, se que tal vez no es como la esperabas pero quise hacerlo de una forma especial."
   ];
   
   if(CONFIG.mensajeExtra.trim() !== "") {
@@ -709,5 +702,16 @@ function initPetals(){
   }
 }
 </script>
+
+<div class="nav">
+  <button class="nd on" onclick="go(1)"></button>
+  <button class="nd" onclick="go(2)"></button>
+  <button class="nd" onclick="go(3)"></button>
+  <button class="nd" onclick="go(4)"></button>
+  <button class="nd" onclick="go(5)"></button>
+  <button class="nd" onclick="go(6)"></button>
+  <button class="nd" onclick="go(7)"></button>
+</div>
+
 </body>
 </html>
